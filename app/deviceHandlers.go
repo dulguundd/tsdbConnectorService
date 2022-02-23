@@ -8,6 +8,8 @@ import (
 	"tsdbConnectorService/service"
 )
 
+//go:generate mockgen -destination=../mocks/service/mockDeviceService.go -package=service ../tsdbConnectorService/service DeviceService
+
 type DeviceHandlers struct {
 	service service.DeviceService
 }

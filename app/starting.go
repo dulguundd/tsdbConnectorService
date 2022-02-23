@@ -15,7 +15,7 @@ type ServiceConfig struct {
 func sanityCheckService() *ServiceConfig {
 	var serviceConfig ServiceConfig
 	if os.Getenv("SERVER_ADDRESS") == "" {
-		serviceConfig.address = "172.22.2.215"
+		serviceConfig.address = "0.0.0.0"
 	} else {
 		serviceConfig.address = os.Getenv("SERVER_ADDRESS")
 	}
